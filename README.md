@@ -114,10 +114,9 @@ haproxy特点和优点：
 ![连接haproxy](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/haproxy-connect-redis.png?raw=true)
 
 
-```
 2.HAProxy 的状态页（Stats Page） 是实时监控负载均衡集群的核心工具，通过 Web 页面展示关键性能指标和后端节点状态：
 http://localhost:8080/haproxy
 账户密码在：haproxy.cfg文件里面
-![访问haproxy]([https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/haproxy-connect-redis.png?raw=true](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/haproxy.png?raw=true))
+![HAProxy 的状态页](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/haproxy.png?raw=true)
 
 Enjoy.

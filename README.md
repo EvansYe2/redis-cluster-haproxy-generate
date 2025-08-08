@@ -22,9 +22,8 @@
   ``` 
 
 3. 构建集群
-  
-  ```
   命令里面的ip改成自己宿主机的ip，构建3主3从
+  ```
   $ docker exec -it redis-6380  redis-cli -h 127.0.0.1 -p 6380 -a 123456789 --cluster create 192.168.31.108:6380 192.168.31.108:6381 192.168.31.108:6382 192.168.31.108:6383 192.168.31.108:6384 192.168.31.108:6385 --cluster-replicas 1 --cluster-yes
   
   ```
@@ -118,5 +117,9 @@ haproxy特点和优点：
 http://localhost:8080/haproxy
 账户密码在：haproxy.cfg文件里面
 ![HAProxy 的状态页](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/haproxy.png?raw=true)
+
+补充：连接redis用的工具是：https://github.com/qishibo/AnotherRedisDesktopManager
+
+redis官方也有免费的管理工具：https://redis.io/insight/
 
 Enjoy.

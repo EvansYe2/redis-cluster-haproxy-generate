@@ -1,0 +1,4 @@
+*appendonly.aof
+*dump.rdb
+*nodes.conf
+*redis.log

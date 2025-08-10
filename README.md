@@ -14,9 +14,9 @@
 
 
 2. 生成节点对应的data和redis.conf文件，同时修改haproxy.cfg增加如下图的代码：
-![文件夹结构](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/files.png?raw=true)
+![文件夹结构](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/imgs/files.png?raw=true)
 
-![haproxy修改](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/haproxy-redis.png?raw=true)
+![haproxy修改](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/imgs/haproxy-redis.png?raw=true)
   ```
   注意：如每次重新运行sh generate.sh，一定要先删除之前生成的文件夹，以及haproxy.cfg文件里面新增的内容
   ``` 
@@ -32,7 +32,7 @@
 
 执⾏之后,容器之间会进⾏加⼊集群操作.
 ⽇志中会描述哪些是主节点,哪些从节点跟随哪个主节点.
-![创建集群](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/create-cluster.png?raw=true)
+![创建集群](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/imgs/create-cluster.png?raw=true)
 
 此时,使⽤客⼾端连上集群中的任何⼀个节点,都相当于连上了整个集群.
 
@@ -71,7 +71,7 @@ docker exec -it redis-6382 redis-cli -c -h 127.0.0.1 -p 6382 -a 123456789 SET na
   ```
 
 3.工具连接任意一个节点：
-![连接任意一个节点](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/%E7%9B%B4%E6%8E%A5%E8%BF%9E%E6%8E%A5%E4%BB%BB%E6%84%8F%E4%B8%80%E4%B8%AA%E8%8A%82%E7%82%B9.png?raw=true)
+![连接任意一个节点](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/imgs/%E7%9B%B4%E6%8E%A5%E8%BF%9E%E6%8E%A5%E4%BB%BB%E6%84%8F%E4%B8%80%E4%B8%AA%E8%8A%82%E7%82%B9.png?raw=true)
 
 ### 通过HAProxy连接
 是法国开发者 威利塔罗(Willy Tarreau) 在2000年使用C语言开发的一个开源软件
@@ -110,13 +110,13 @@ haproxy特点和优点：
 支持ACL（access control list）。
 
 1.连接haproxy，haproxy会代理转发：
-![连接haproxy](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/haproxy-connect-redis.png?raw=true)
+![连接haproxy](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/imgs/haproxy-connect-redis.png?raw=true)
 
 
 2.HAProxy 的状态页（Stats Page） 是实时监控负载均衡集群的核心工具，通过 Web 页面展示关键性能指标和后端节点状态：
 http://localhost:8080/haproxy
 账户密码在：haproxy.cfg文件里面
-![HAProxy 的状态页](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/haproxy.png?raw=true)
+![HAProxy 的状态页](https://github.com/EvansYe2/redis-cluster-haproxy-generate/blob/main/imgs/haproxy.png?raw=true)
 
 补充：连接redis用的工具是：https://github.com/qishibo/AnotherRedisDesktopManager
 
